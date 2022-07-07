@@ -1,0 +1,166 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .header_container {
+    background: $headerBackground;
+    width: 100%;
+    height: $headerContainerHeight;
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 40px -8px rgb(0 0 0 / 50%);
+
+    .header {
+      width: $maxWidth;
+      display: flex;
+      height: $headerHeight;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo_container {
+        height: $headerHeight;
+        width: 130px;
+        cursor: pointer;
+
+        .logo {
+          height: 100%;
+        }
+      }
+      .nav_container {
+        width: 560px;
+
+        .nav {
+          height: $headerHeight;
+          line-height: $headerHeight;
+          display: flex;
+          justify-content: center;
+          justify-content: space-around;
+
+          .nav_item {
+            cursor: pointer;
+
+            .nav_icon {
+              height: 1rem;
+            }
+
+            .nav_link {
+              text-decoration: none;
+              color: $headerTextColor;
+              font-weight: 600;
+            }
+
+            &:hover {
+              .nav_icon {
+                color: $textHoverColor;
+              }
+
+              .nav_link {
+                color: $textHoverColor;
+              }
+            }
+          }
+        }
+      }
+      .other {
+        display: flex;
+        width: 130px;
+        height: $headerHeight;
+        line-height: $headerHeight;
+
+        .button {
+          flex: 1;
+
+          .button_link {
+            text-decoration: none;
+            color: $headerTextColor;
+            font-weight: 600;
+
+            &:hover {
+              color: $textHoverColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    margin: 60px auto;
+    overflow: hidden;
+    width: $maxWidth;
+  }
+
+  .footer_container {
+    width: 100%;
+    background: $footerBackground;
+    margin-top: auto;
+
+    .footer {
+      height: 100%;
+      width: $maxWidth;
+      padding: 20px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+
+      & > * {
+        margin: 10px 0;
+        width: 100%;
+      }
+
+      .friend_link {
+        display: flex;
+        padding: 0 5%;
+        align-items: baseline;
+
+        .friend_items {
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: $maxWidth;
+          height: auto;
+          overflow: hidden;
+          justify-content: center;
+
+          .friend_item {
+            height: $friendTextHeight;
+            line-height: $friendTextHeight;
+            padding-left: 16px;
+            padding-right: 16px;
+
+            &:hover {
+              color: $textHoverColor;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        color: $footerTextColor;
+        text-align: center;
+
+        .copyright_name {
+          &:hover {
+            color: $textHoverColor;
+          }
+        }
+
+        a {
+          text-decoration: none;
+
+          &:hover {
+            color: $textHoverColor;
+          }
+        }
+      }
+    }
+  }
+}
