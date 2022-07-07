@@ -1,17 +1,20 @@
-// body {
-//   // background-color: red;
-//   // background-image: url('../img/logo.png');
+.error_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  .info {
+    font-size: 30px;
+  }
 
-//   ul {
-//     list-style-type: none;
+  .result {
+    .result_title {
+    }
 
-//     li {
-//       line-height: 35px;
-//     }
-//   }
-
-//   // img {
-//   //   width: 100px;
-//   //   height: 100px;
-//   // }
-// }
+    .result_items {
+      .result_item {
+      }
+    }
+  }
+}

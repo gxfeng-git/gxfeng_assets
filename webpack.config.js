@@ -55,6 +55,8 @@ const setMPA = () => {
 const { entry, htmlWebpackPlugins } = setMPA()
 
 module.exports = {
+  target: 'web',
+  mode: 'development',
   resolve: {
     alias: {
       '@': resolve('src')
@@ -151,5 +153,21 @@ module.exports = {
         extractComments: false //不将注释提取到单独的文件中
       })
     ]
+  },
+  devServer: {
+    static: {
+      directory: join(__dirname, 'dist'),
+      serveIndex: true,
+      watch: true
+    },
+    // 一切服务都启用gzip压缩
+    compress: true,
+    // 可访问host
+    host: '0.0.0.0',
+    // 服务端口
+    port: 8080,
+    // 启用热更新
+    hot: 'only',
+    liveReload: true
   }
 }
