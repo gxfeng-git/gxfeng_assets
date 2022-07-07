@@ -1,12 +1,8 @@
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-
   .header_container {
     background: $headerBackground;
     width: 100%;
-    height: $headerContainerHeight;
+    height: $headerHeight;
     position: sticky;
     top: 0;
     margin: 0 auto;
@@ -18,13 +14,13 @@ body {
     .header {
       width: $maxWidth;
       display: flex;
-      height: $headerHeight;
+      height: $headerNavHeight;
       margin: 0 auto;
       align-items: center;
       justify-content: space-between;
 
       .logo_container {
-        height: $headerHeight;
+        height: $headerNavHeight;
         width: 130px;
         cursor: pointer;
 
@@ -36,8 +32,8 @@ body {
         width: 560px;
 
         .nav {
-          height: $headerHeight;
-          line-height: $headerHeight;
+          height: $headerNavHeight;
+          line-height: $headerNavHeight;
           display: flex;
           justify-content: center;
           justify-content: space-around;
@@ -70,8 +66,8 @@ body {
       .other {
         display: flex;
         width: 130px;
-        height: $headerHeight;
-        line-height: $headerHeight;
+        height: $headerNavHeight;
+        line-height: $headerNavHeight;
 
         .button {
           flex: 1;
@@ -90,16 +86,10 @@ body {
     }
   }
 
-  .container {
-    margin: 60px auto;
-    overflow: hidden;
-    width: $maxWidth;
-  }
-
   .footer_container {
     width: 100%;
     background: $footerBackground;
-    margin-top: auto;
+    height: $footerHeight;
 
     .footer {
       height: 100%;
@@ -124,17 +114,15 @@ body {
 
         .friend_items {
           display: flex;
-          flex-wrap: wrap;
           flex-basis: $maxWidth;
-          height: auto;
           overflow: hidden;
           justify-content: center;
 
           .friend_item {
             height: $friendTextHeight;
             line-height: $friendTextHeight;
-            padding-left: 16px;
-            padding-right: 16px;
+            padding: 0 16px;
+            flex: 0 0 auto;
 
             &:hover {
               color: $textHoverColor;
@@ -162,5 +150,13 @@ body {
         }
       }
     }
+  }
+
+  .container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: $maxWidth;
+    height: calc(100% - $headerHeight - $footerHeight);
+    position: relative;
   }
 }
