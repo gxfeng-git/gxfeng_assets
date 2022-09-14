@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && sh rsync.sh"
   },
-  "author": "gxfengg",
+  "author": "gxfeng",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.6.0",
